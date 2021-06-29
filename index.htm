@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chinese practice</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="words.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id="help" name="help" onclick="toggleHelp()">?</button>
+        <header>
+            <form>
+                <label for="fname">Choose a test:</label>
+                <select id="selectTest" name="selectTest">
+                    <option value="None">None</option>
+                    <option value=HSK1>HSK 1</option>
+                    <option value=HSK2>HSK 2</option>
+                    <option value=HSK3>HSK 3</option>
+                    <option value=HSK4>HSK 4</option>
+                    <option value=HSK5>HSK 5</option>
+                </select>
+                <label for="uploadTest">Or</label>
+                <input type="file" id="uploadTest" name="uploadTest" style="display:none">
+                <button onclick="document.getElementById('uploadTest').click();" type="button" id="uploadButton">Upload test</button>
+                <label for="testStart">Test from:</label>
+                <input type="number" id="testStart" name="testStart">
+                <label for="testEnd">to:</label>
+                <input type="number" id="testEnd" name="testEnd">
+                <button id="startTest" name="startTest" type="button" onclick="loadTest()">Go!</button>
+            </form> 
+        </header>
+        <main>
+            <h1 id="title" name="title">Chinese HSK 3 (1-50)</h1>
+            <h2 id="progress" name="progress">1 out of 300</h2>
+            <h3 id="characters" name="characters">A</h3>
+            <h4 id="mark" name="mark" style="visibility:hidden">Correct</h4>
+            <div id="answerDiv">
+                <div>
+                </div>
+                <div id="answerInputDiv">
+                    <input type="text" id="answer" name="answer">
+                </div>
+                <div id="answerButtonsDiv">
+                    <button id="submitAnswerButton" name="submitAnswer" onclick="checkWord()">Submit</button>
+                    <button id="showAnswerButton" name="showAnswer" onclick="checkAnswer()">Answer</button>
+                    <button id="nextQuestionButton" name="nextQuestion" onclick="nextWord()">Next</button>
+                </div>
+            </div>
+            <button id="retake" name="retake" onclick="retakeTest()">Retake skipped words</button>
+            <div id="statistics">
+                <p id="correctDisplay" name="correct"> 0 Correct </p>
+                <p id="skippedDisplay" name="skipped"> 0 Skipped </p>
+                <p id="accuracyDisplay" name="accuracy"> 0% Correct so far </p>
+            </div>
+        </main>
+        <div id="helpModal" style="visibility:hidden">
+            <div id="Modal">
+                <div id="ModalContent">
+                    <h1>Hi!</h1>
+                    <h2>This is a simple website to help with Chinese practice. 
+                        You can select one of the HSK vocabulary lists from the dropdown,
+                         or upload your own. You can specify which sections of the list 
+                         you want to practice, or leave it blank to go through all the characters. 
+                         If you upload your own list, make sure it is a text file encoded in UTF-8,
+                        with each question/answer pair on a seperate line with a space in between them.
+                    </h2>
+                    <button onclick="toggleHelp()">Ok!</button>
+                    <button onclick="window.open('SampleFile.txt')">See example of custom list</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #efefefff;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    color: #3e3e3eff;
+}
+
+header {
+    background-color: #4086ffff;
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    color: #efefefff;
+}
+
+button, select {
+    cursor: pointer;
+}
+
+button {
+    border-width: 0;
+    border-radius: 5px;
+    color: #3e3e3eff;
+}
+
+button:hover{
+    background-color: #ffffff;
+    border-width: 0;
+}
+
+form {
+    display:block;
+}
+
+header label{
+    font-size:35px;
+}
+
+header input{
+    height: 25px;
+    padding: 0;
+    width:5%;
+    vertical-align: text-bottom;
+    font-size:20px;
+    margin: 0 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+header button{
+    height: 30px;
+    padding: 0 10px;
+    vertical-align: text-bottom;
+    font-size:20px;
+    margin: 0 15px;
+    background-color:#efefefff;
+}
+
+#uploadButton{
+    width: fit-content;
+}
+
+header select{
+    height: 30px;
+    width: 8%;
+    padding: 0 5px;
+    vertical-align: text-bottom;
+    font-size:20px;
+    margin: 0 15px;
+}
+
+#help{
+    position:absolute;
+    right: 15px;
+    top: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border-width: 0;
+    color: #4086ffff;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+main {
+    margin: auto;
+    margin: 10px 0;
+    padding-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    margin-top:30px;
+
+}
+
+h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-top:0;
+}
+
+main input{
+    width: 100%;
+    height: 25px;
+    font-size: 20px;
+    text-align:right;
+    margin: auto;
+}
+
+#answerButtonsDiv button{
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    background-color: #d9d9d9;
+}
+
+#retake{
+    height: fit-content;
+    width: fit-content;
+    font-size: 25px;
+    padding: 10px 15px;
+    background-color: #d9d9d9;
+}
+
+#retake:hover{
+    background-color: #ffffff;
+}
+
+#answerDiv{
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+
+#answerDiv div{
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+    margin: 15px;
+}
+
+#statistics {
+    margin: 0;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 25px;
+    margin:10px;
+    font-weight:300;
+}
+
+#helpModal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ad;
+    left: 0;
+    top: 0;
+}
+
+#Modal {
+    width: 600px;
+    height: 500px;
+    background-color: #e7e6e6;
+    margin:auto;
+    margin-top: 100px;
+    border-radius: 15px;
+    padding-top: 5px;
+    text-align:center;
+}
+
+#ModalContent {
+    margin: 40px 50px;
+}
+
+#ModalContent h1 {
+    font-size: 40px;
+}
+ 
+#ModalContent h2 {
+    font-size:25px;
+}
+
+#ModalContent button{
+    font-size: 25px;
+    margin-top: 20px;
+}
